@@ -24,6 +24,7 @@
     position: absolute;
     top: 0;
     width: 1440px;
+    border: none;
 }
 
 .stats-page .text-wrapper-8 {
