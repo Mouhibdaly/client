@@ -3,8 +3,11 @@ import { FunctionComponent, useState } from "react";
 import styles from "../../styles/ExplorePage.module.css";
 import img1 from "../../../public/Assests/images/albert-dera-ILip77SbmOE-unsplash 1 (1).png"
 import Image from "next/image";
-// import NavBar from "../NavBar";
-// import Footer from "../Footer";
+import NavBar from "@/componnents/NavBar";
+import Footer from "@/componnents/Footer";
+import BrandCard from "@/componnents/UpcomingBrands";
+import FashionistaCard from "@/componnents/UpcomigCreators";
+
 // import BrandCard from "../BrandCard";
 // import FashionistaCard from "../UpcomigCreators";
 // import FullProductCard from "../ProductCard";
@@ -25,7 +28,7 @@ const ExplorePage: FunctionComponent = () => {
 
   return (
     <div>
-      {/* <NavBar /> */}
+      <NavBar />
       <div className={styles.explorePage}>
         <div className={styles.explorePageChild} />
         <div className={styles.exploreCollections}>Explore Collections</div>
@@ -55,12 +58,12 @@ const ExplorePage: FunctionComponent = () => {
           </div>
         </div>
         <div className={styles.exploreComponents}>
-        {/* {selectedCard === "brand" && <BrandCard />}
-        {selectedCard === "creator" && <FashionistaCard />}
-        {selectedCard === "fashion" && <FullProductCard />} */}
+          {selectedCard === "brand" && <BrandCard />}
+          {selectedCard === "creator" && <FashionistaCard />}
+          {selectedCard !== "brand" && selectedCard !== "creator" && <h1 style={{textAlign:"center"}}>No Products For Now </h1>}
+        </div>
       </div>
-      </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
